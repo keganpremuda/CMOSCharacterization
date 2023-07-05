@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This project investigates the fundamental circuitry behind logic gates and their dynamic characteristics by using and understanding the basic structure of CMOS transistor logic. Theory, LTSpice, Analog Discovery multi-function instrument, an analog multimeter, and Excel will be used in order to study CMOS circuits including a CMOS inverter, and simple CMOS NAND and NOR gates. Analyzing the waveforms of each circuit, establishing operating points Q, finding the transfer characteristic gain, and determining the noise margins for each transistor will help to achieve a clear understanding of each digital circuit.
+This project investigates the fundamental circuitry behind logic gates and their dynamic characteristics by using and understanding the basic structure of CMOS transistor logic. Theory, LTSpice, Analog Discovery multi-function instrument, an analog multimeter, and Excel will be used in order to study CMOS circuits including a CMOS inverter. Analyzing the waveforms of the CMOS Inverter circuit, establishing operating points Q, finding the transfer characteristic gain, and determining the noise margins for each transistor will help to achieve a clear understanding of each digital circuit.
 <br />
 
 
@@ -59,7 +59,7 @@ This project investigates the fundamental circuitry behind logic gates and their
   The CMOS Inverter was built in LTSpice, and then a DC sweep was simulated to get the voltage characteristic plot, as well as the gain and noise margins.</p>
   <p align="center">
   <img src="https://i.imgur.com/10vAB83.png" height="80%" width="80%" alt="CMOS Inverter LTSpice"/><br><br>
-  <img src="https://i.imgur.com/N6mreZv.png" height="80%" width="80%" alt="CMOS Inverter LTSpice Plot"/></p><br><br>
+  <img src="https://i.imgur.com/N6mreZv.png" height="80%" width="80%" alt="CMOS Inverter LTSpice Plot"/></p><br>
   <p align="left">
   <b>Gain</b> = Slope = <b>-27.6917V/V</b><br>
   <br>
@@ -67,29 +67,61 @@ This project investigates the fundamental circuitry behind logic gates and their
   <b>NMh</b> = Voh – Vih = 5V-3.0V = <b>2.0V</b><br>
   <b>NMl</b> = Vil – Vol = 2.35V-0V = <b>2.35V</b><br>
   <br>
-<br />
-<br />
-<br />
-<b>Determine the Propagation Delay(tp), Power Dissipation(Pd), and the Delay-Power Product(DP)</b><br><br/>
-  <img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
+  <br />
+  <br />
+  <br />
+  <br />
+<p align="center">
+<b>Determine the Propagation Delay(tp), Power Dissipation(PD), and the Delay-Power Product(DP)</b></<br><br><br/>
+  <p align="left">
+  The propagation delay, power dissipation, and the delay-power product were calculated as follows:<br><br>
+  <b>Propagation Delay</b> = tp = 0.5(tPHL + tPLH)<br>
+  <br>
+  High-to-Low Propagation Delay = tPHL = αnCload/k’n(W/L)Vdd * Assume λ=0<br>
+  Low-to-High Propagation Delay = tPLH = αpCload/k’p(W/L)Vdd * Assume λ=0<br>
+  <br>
+  αn = αp = 1.7<br>
+  Vdd = 5V<br>
+  Cload = 90pF<br>
+  k’n(W/L) = 0.759mA/V^2<br>
+  k’p(W/L) = 0.33mA/V^2<br>
+  <br>
+  tPHL = (1.7)(90x10^-12F)/(0.759x10^-3A/V^2)(5V) = 40.32ns<br>
+  tPLH = (1.7)(90x10^-12F)/(0.33x10^-3A/V^2)(5V) = 92.73ns<br>
+  <br>
+  <b>tp</b> = 0.5(40.32ns + 92.73ns) = <b>66.53ns</b><br>
+  <br>
+  <b>Power Dissipation</b> = <b>PD</b> = Cload*Vdd*f = (90x10^-12F)(5V)(1000Hz) = <b>2.25µW</b><br>
+  <br>
+  <b>Delay-Power Product</b> = <b>DP</b> = PD*tp = (2.25x10^-6J/s)(66.53x10^-9s) = <b>0.1497pJ</b><br>
+  <br>
+  <br>
+  A square wave input signal of 0V to 5V at 1kHz frequency was applied to the circuit using a waveform generator, and the outputs and inputs were measured using an oscilloscope.</p>
+  <br />
+  <br />
+  <p align="center">
+  <img src="https://i.imgur.com/GV8oLlI.png" height="80%" width="80%" alt="ADK Oscilloscope"/><br><br></p>
+  <p align="left">
+  The fall delay time(tf), and rise delay time (tr) for the input and output voltage were recorded and used to calculate high-to-low propagation delay (tpHL), low-to-high propagation delay     
+  (tPLH), and propagation delay(tp). The calculations are as follows:<br><br>
+  trVin = 48.34ns<br>
+  tfVin = 91.14ns<br>
+  trVout = 86.28ns<br>
+  tfVout = 42.07ns<br>
+  <br>
+  <b>tPLH</b> = 0.5(tfVin + trVout) = 0.5(91.14ns+86.28ns) = <b>88.71ns</b><br>
+  <b>tPHL</b> = 0.5(trVin + tfVout) = 0.5(48.34ns+42.07ns) = <b>45.205ns</b><br>
+  <br>
+  <b>Propagation Delay</b> = <b>tp</b> = 0.5(tPLH + tPHL) = 0.5(88.71ns+45.205ns) = <b>66.958ns</b><br>
+  <br>
+  <br>
+  The circuit was then simulated using a transient analysis in LTSpice, and the values of tpHL, tpLH, tr, tf, and tp were determined.</p><br>
+  <p align="center">
+  <img src="https://i.imgur.com/nsef3gj.png" height="80%" width="80%" alt="LTSpice Transient Analysis"/></p><br><br>
+  <p align="left">
+  The <b>propagation delay</b> for this simulation was <b>55.36ns</b>.</p>
+  <br />
+  <br />
 <!--
  ```diff
 - text in red
