@@ -2,7 +2,7 @@
 
 
 <h2>Description</h2>
-This project investigates the fundamental circuitry behind logic gates and their dynamic characteristics by using and understanding the basic structure of CMOS transistor logic. Theory, LTSpice, Analog Discovery multi-function instrument, an analog multimeter, and Excel will be used in order to study CMOS circuits including a CMOS inverter. Analyzing the waveforms of the CMOS Inverter circuit, establishing operating points Q, finding the transfer characteristic gain, and determining the noise margins for each transistor will help to achieve a clear understanding of each digital circuit.
+This project investigates the fundamental circuitry behind logic gates and their dynamic characteristics by using and understanding the basic structure of CMOS transistor logic. Theory, LTSpice, Analog Discovery multi-function instrument, an analog multimeter, and Excel were used in order to study CMOS circuits including a CMOS inverter. Analyzing the waveforms of the CMOS Inverter circuit, establishing operating points Q, finding the transfer characteristic gain, and determining the noise margins for each transistor will help to achieve a clear understanding of each digital circuit.
 <br />
 
 
@@ -41,22 +41,22 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br>
   <b>NMh</b>=<b>NMl</b>= (3/8)(5V+(2/3)1V) = <b>2.125V</b><br>
   <br>
-  The circuit was built on a breadboard, and the voltage was varied in steps from 0V to 5V using a waveform generator while measuring the corresponding Vout using an oscilloscope.</p><br>
+  The circuit was built on a breadboard, and the voltage was varied in steps from 0V to 5V using a waveform generator while measuring the corresponding Vout with an oscilloscope.</p><br>
   <p align="center">
   <img src="https://i.imgur.com/8CATQZ0.jpg" height="80%" width="80%" alt="CMOS Inverter Breadboard"/></p><br><br>
   <p align="left">
-  The measurements recorded were plotted in Excel to obtain the voltage transfer characteristic of the CMOS Inverter. The slope of the transfer characteristic around the point Qn and Qp were designated by a red line in the saturation area, which represents the transfer characteristic gain. The noise margins were also determined from the plot to compare with calculated values.</p><br><br>
+  The recorded measurements were plotted in Excel to obtain the voltage transfer characteristic of the CMOS Inverter. The slope of the transfer characteristic around the point Qn and Qp were designated by a red line in the saturation area, which represents the transfer characteristic gain. The noise margins were also determined from the plot to compare with calculated values.</p><br><br>
   <p align="center">
   <img src="https://i.imgur.com/0eri7G5.png" height="80%" width="80%" alt="Voltage Transfer Characteristic CMOS Inverter"/></p><br><br>
   <p align="left">
-  Equation Obtained: y= -31.55x + 82.637<br>
-  Gain = Slope = -31.55V/V<br>
+  Equation Obtained: <b>y= -31.55x + 82.637</b><br>
+  <b>Gain</b> = Slope = <b>-31.55V/V</b><br>
   <br>
   Calculation of Noise Margins from Plot:<br>
   <b>NMh</b> = Voh – Vih = 5V-2.7V = <b>2.3V</b><br>
   <b>NMl</b> = Vil – Vol = 2.2V-0V = <b>2.2V</b><br>
   <br>
-  The CMOS Inverter was built in LTSpice, and then a DC sweep was simulated to get the voltage characteristic plot, as well as the gain and noise margins.</p>
+  The CMOS Inverter was built in LTSpice, and a DC sweep was simulated to get the voltage characteristic plot, as well as the gain and noise margins.</p>
   <p align="center">
   <img src="https://i.imgur.com/10vAB83.png" height="80%" width="80%" alt="CMOS Inverter LTSpice"/><br><br>
   <img src="https://i.imgur.com/N6mreZv.png" height="80%" width="80%" alt="CMOS Inverter LTSpice Plot"/></p><br>
@@ -103,7 +103,7 @@ This project investigates the fundamental circuitry behind logic gates and their
   <img src="https://i.imgur.com/GV8oLlI.png" height="80%" width="80%" alt="ADK Oscilloscope"/><br><br></p>
   <p align="left">
   The fall delay time(tf), and rise delay time (tr) for the input and output voltage were recorded and used to calculate high-to-low propagation delay (tpHL), low-to-high propagation delay     
-  (tPLH), and propagation delay(tp). The calculations are as follows:<br><br>
+  (tPLH), and propagation delay (tp). The calculations were as follows:<br><br>
   trVin = 48.34ns<br>
   tfVin = 91.14ns<br>
   trVout = 86.28ns<br>
