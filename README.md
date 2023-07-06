@@ -43,7 +43,8 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br>
   The circuit was built on a breadboard, and the voltage was varied in steps from 0V to 5V using a waveform generator while measuring the corresponding Vout with an oscilloscope.</p><br>
   <p align="center">
-  <img src="https://i.imgur.com/8CATQZ0.jpg" height="80%" width="80%" alt="CMOS Inverter Breadboard"/></p><br><br>
+  <img src="https://i.imgur.com/8CATQZ0.jpg" height="80%" width="80%" alt="CMOS Inverter Breadboard"/><br>
+  <b>Breadboard CMOS Inverter Circuit</b></p><br><br>
   <p align="left">
   The recorded measurements were plotted in Excel to obtain the voltage transfer characteristic of the CMOS Inverter. The slope of the transfer characteristic around the point Qn and Qp were designated by a red line in the saturation area, which represents the transfer characteristic gain. The noise margins were also determined from the plot to compare with calculated values.</p><br><br>
   <p align="center">
