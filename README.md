@@ -58,8 +58,10 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br>
   The CMOS Inverter was built in LTSpice, and a DC sweep was simulated to get the voltage characteristic plot, as well as the gain and noise margins.</p>
   <p align="center">
-  <img src="https://i.imgur.com/10vAB83.png" height="80%" width="80%" alt="CMOS Inverter LTSpice"/><br><br>
-  <img src="https://i.imgur.com/N6mreZv.png" height="80%" width="80%" alt="CMOS Inverter LTSpice Plot"/></p><br>
+  <img src="https://i.imgur.com/10vAB83.png" height="80%" width="80%" alt="CMOS Inverter LTSpice"/><br>
+  <b>LTSpice Schematic</b><br><br>
+  <img src="https://i.imgur.com/N6mreZv.png" height="80%" width="80%" alt="CMOS Inverter LTSpice Plot"/><br>
+  <b>LTSpice Simulation and Voltage Transfer Characteristic Plot</b></p><br><br>
   <p align="left">
   <b>Gain</b> = Slope = <b>-27.6917V/V</b><br>
   <br>
@@ -100,7 +102,8 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br />
   <br />
   <p align="center">
-  <img src="https://i.imgur.com/GV8oLlI.png" height="80%" width="80%" alt="ADK Oscilloscope"/><br><br></p>
+  <img src="https://i.imgur.com/GV8oLlI.png" height="80%" width="80%" alt="ADK Oscilloscope"/><br>
+  <b>Oscilloscope Reading</b><br><br></p>
   <p align="left">
   The fall delay time(tf), and rise delay time (tr) for the input and output voltage were recorded and used to calculate high-to-low propagation delay (tpHL), low-to-high propagation delay     
   (tPLH), and propagation delay (tp). The calculations were as follows:<br><br>
@@ -117,7 +120,8 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br>
   The circuit was then simulated using a transient analysis in LTSpice, and the values of tpHL, tpLH, tr, tf, and tp were determined.</p><br>
   <p align="center">
-  <img src="https://i.imgur.com/nsef3gj.png" height="80%" width="80%" alt="LTSpice Transient Analysis"/></p><br><br>
+  <img src="https://i.imgur.com/nsef3gj.png" height="80%" width="80%" alt="LTSpice Transient Analysis"/><br>
+  <b>LTSpice Transient Analysis and Data Log File</b></p><br><br>
   <p align="left">
   The <b>propagation delay</b> for this simulation was <b>55.36ns</b>.</p>
   <br />
