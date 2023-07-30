@@ -121,7 +121,7 @@ This project investigates the fundamental circuitry behind logic gates and their
   <br>
   The circuit was then simulated using a transient analysis in LTSpice, and the values of tpHL, tpLH, tr, tf, and tp were determined.</p><br>
   <p align="center">
-  <img src="https://i.imgur.com/nsef3gj.png" height="80%" width="80%" alt="LTSpice Transient Analysis"/><br>
+  <img src="https://i.imgur.com/ZR0qRRY.png" height="80%" width="80%" alt="LTSpice Transient Analysis"/><br>
   <b>LTSpice Transient Analysis and Data Log File</b></p><br><br>
   <p align="left">
   The <b>propagation delay</b> for this simulation was <b>55.36ns</b>.</p>
